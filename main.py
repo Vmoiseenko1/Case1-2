@@ -37,7 +37,7 @@ def snowflake_ice2():
 def minkovsky_curve():
     pass
 
-# For Vlas: draw the Levi curve ба ба ба(русскэ языка)
+# For Vlas: draw the Levi curve 
 def levi_curve():
     pass
 
