@@ -10,8 +10,19 @@ def binary_tree():
     pass
 
 # For Victoria: draw the Koch curve
-def koch_curve():
-    pass
+def koch_curve(l,n):
+    if n == 0:
+        turtle.forward(l)
+    else:
+        koch_curve(l/3,n-1)
+        turtle.left(60)
+        koch_curve(l/3,n-1)
+        turtle.right(120)
+        koch_curve(l/3,n-1)
+        turtle.left(60)
+        koch_curve(l/3,n-1)
+
+
 
 # For Vlas: draw the Koch snowflake
 def koch_snowflake():
@@ -42,8 +53,13 @@ def levi_curve():
     pass
 
 def main():
+    turtle.up()
+    turtle.goto(-200, 0)
+    turtle.down()
     binary_tree()
-    koch_curve()
+    l = int(input('Enter the length:'))
+    n = int(input('Enter the  depth:'))
+    koch_curve(l,n)
     koch_snowflake()
     ice_fractal1()
     ice_fractal2()
@@ -51,6 +67,7 @@ def main():
     snowflake_ice2()
     minkovsky_curve()
     levi_curve()
+
 
 main()
 
