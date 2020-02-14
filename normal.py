@@ -81,9 +81,18 @@ def minkovsky_curve(l,n):
         minkovsky_curve(l/6,n-1)
 
 
-# For Vlas: draw the Levi curve
-def levi_curve():
-    pass
+# For Victoria: draw the Levi curve
+def levi_curve(l,n):
+    if n == 0:
+        turtle.forward(l)
+        return
+    else:
+        turtle.left(45)
+        levi_curve(l, n - 1)
+        turtle.right(45)
+        turtle.right(45)
+        levi_curve(l, n - 1)
+        turtle.left(45)
 
 def main():
     turtle.up()
@@ -107,7 +116,7 @@ def main():
     elif name == 'Minkovsky Curve':
         minkovsky_curve(l,n)
     elif name == 'Levi Curve':
-        levi_curve()
+        levi_curve(l,n)
 
 main()
 
