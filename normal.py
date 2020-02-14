@@ -23,7 +23,7 @@ def koch_snowflake():
     pass
 
 # For Victoria: draw the ice fractal (example 1)
-def ice_fractal1():
+def ice_fractal1(l, n):
     if n == 0:
         turtle.forward(l)
     else:
@@ -41,8 +41,17 @@ def ice_fractal1():
 
 
 # For Vlas: draw the ice fractal (example 2)
-def ice_fractal2():
-    pass
+def ice_fractal2(l, n):
+    if n == 0:
+        turtle.forward(l)
+    else:
+        ice_fractal2(l / 2, n - 1)
+        turtle.left(90)
+        ice_fractal2(l / 4, n - 1)
+        turtle.left(180)
+        ice_fractal2(l / 4, n - 1)
+        turtle.left(90)
+        ice_fractal2(l / 2, n - 1)
 
 # For Victoria: draw the binary tree fractal
 def binary_tree():
