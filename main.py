@@ -58,7 +58,23 @@ def snowflake_ice2():
 
 # For Victoria: draw the Minkovsky curve
 def minkovsky_curve():
-    pass
+    if n == 0:
+        turtle.forward(l)
+    else:
+        minkovsky_curve(l/6, n-1)
+        turtle.left(90)
+        minkovsky_curve(l/6, n-1)
+        turtle.right(90)
+        minkovsky_curve(l/6, n-1)
+        turtle.right(90)
+        minkovsky_curve(l/3, n-1)
+        turtle.left(90)
+        minkovsky_curve(l/6,n-1)
+        turtle.left(90)
+        minkovsky_curve(l/6,n-1)
+        turtle.right(90)
+        minkovsky_curve(l/6,n-1)
+
 
 # For Vlas: draw the Levi curve 
 def levi_curve():
@@ -77,7 +93,7 @@ def main():
     ice_fractal2()
     snowflake_ice1()
     snowflake_ice2()
-    minkovsky_curve()
+    minkovsky_curve(l,n)
     levi_curve()
 
 
