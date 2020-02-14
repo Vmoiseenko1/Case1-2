@@ -5,6 +5,10 @@
 
 import turtle
 
+# For both: draw the binary tree
+def binary_tree():
+    pass
+
 # For Victoria: draw the Koch curve
 def koch_curve(l,n):
     if n == 0:
@@ -44,12 +48,12 @@ def ice_fractal1():
 def ice_fractal2():
     pass
 
-# For Victoria: draw the binary tree fractal
-def binary_tree():
+# For Victoria: draw the snowflake for the first ice fractal
+def snowflake_ice1():
     pass
 
-# For Vlas: draw the branch fractal
-def branch():
+# For Vlas: draw the snowflake for the second ice fractal
+def snowflake_ice2():
     pass
 
 # For Victoria: draw the Minkovsky curve
@@ -82,12 +86,13 @@ def main():
     turtle.down()
     l = int(input('Enter the length:'))
     n = int(input('Enter the  depth:'))
+    binary_tree()
     koch_curve(l,n)
     koch_snowflake()
     ice_fractal1(l,n)
     ice_fractal2()
-    binary_tree()
-    branch()
+    snowflake_ice1()
+    snowflake_ice2()
     minkovsky_curve(l,n)
     levi_curve()
 
