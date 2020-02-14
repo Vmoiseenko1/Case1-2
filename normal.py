@@ -80,17 +80,25 @@ def main():
     turtle.up()
     turtle.goto(-200, 0)
     turtle.down()
-    l = int(input('Enter the length:'))
-    n = int(input('Enter the  depth:'))
-    koch_curve(l,n)
-    koch_snowflake()
-    ice_fractal1(l,n)
-    ice_fractal2()
-    binary_tree()
-    branch()
-    minkovsky_curve(l,n)
-    levi_curve()
-
+    name = str(input('Enter the name of fractal: '))
+    l = int(input('Enter the length: '))
+    n = int(input('Enter the  depth: '))
+    if name == 'Koch Curve':
+        koch_curve(l,n)
+    elif name == 'Koch Snowflake':
+        koch_snowflake()
+    elif name == 'Ice Fractal 1':
+        ice_fractal1(l,n)
+    elif name == 'Ice Fractal 2':
+        ice_fractal2()
+    elif name == 'Binary Tree':
+        binary_tree()
+    elif name == 'Branch':
+        branch()
+    elif name == 'Minkovsky Curve':
+        minkovsky_curve(l,n)
+    elif name == 'Levi Curve':
+        levi_curve()
 
 main()
 
