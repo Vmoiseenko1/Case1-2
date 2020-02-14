@@ -45,8 +45,17 @@ def ice_fractal1():
 
 
 # For Vlas: draw the ice fractal (example 2)
-def ice_fractal2():
-    pass
+def ice_fractal2(l, n):
+    if n == 0:
+        turtle.forward(l)
+    else:
+        ice_fractal2(l / 2, n - 1)
+        turtle.left(90)
+        ice_fractal2(l / 4, n - 1)
+        turtle.left(180)
+        ice_fractal2(l / 4, n - 1)
+        turtle.left(90)
+        ice_fractal2(l / 2, n - 1)
 
 # For Victoria: draw the snowflake for the first ice fractal
 def snowflake_ice1():
@@ -84,8 +93,8 @@ def main():
     turtle.up()
     turtle.goto(-200, 0)
     turtle.down()
-    l = int(input('Enter the length:'))
-    n = int(input('Enter the  depth:'))
+    l = int(input('Enter the length: '))
+    n = int(input('Enter the  depth: '))
     binary_tree()
     koch_curve(l,n)
     koch_snowflake()
