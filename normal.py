@@ -1,6 +1,6 @@
 # Case-study 1
-# Developers: Moiseenko V.( %)
-#             Vlasov V.( %)
+# Developers: Moiseenko V.( 69 %)
+#             Vlasov V.( 31 %)
 # This programm allows to draw different fractal pictures
 
 import turtle
