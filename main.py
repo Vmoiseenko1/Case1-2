@@ -57,7 +57,7 @@ def snowflake_ice2():
     pass
 
 # For Victoria: draw the Minkovsky curve
-def minkovsky_curve():
+def minkovsky_curve(l,n):
     if n == 0:
         turtle.forward(l)
     else:
